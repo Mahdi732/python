@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookNShare - Interactive Recipe Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-utensils text-orange-500 text-3xl mr-2"></i>
+                        <span class="text-2xl font-bold text-gray-800">CookNShare</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-orange-500">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-orange-500">Recipes</a>
+                    <a href="#" class="text-gray-600 hover:text-orange-500">Shop</a>
+                    <a href="#" class="text-gray-600 hover:text-orange-500">Community</a>
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-r from-orange-50 to-yellow-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                        Discover & Share <br/>
+                        <span class="text-orange-500">Delicious Recipes</span>
+                    </h1>
+                    <p class="text-gray-600 text-lg mb-8">
+                        Join our community of food lovers. Explore recipes, customize portions, 
+                        and get ingredients delivered to your door.
+                    </p>
+                    <div class="flex space-x-4">
+                        <button class="bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition">
+                            Get Started
+                        </button>
+                        <button class="border-2 border-orange-500 text-orange-500 px-8 py-3 rounded-lg hover:bg-orange-50 transition">
+                            Browse Recipes
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="Daco_5897880.png" alt="Delicious Food" class="rounded-lg "/>
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-users text-orange-500"></i>
+                            <span class="text-gray-800 font-semibold">5k+ Active Users</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Why Choose CookNShare?</h2>
+                <p class="text-gray-600">Everything you need to explore the world of cooking</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-edit text-orange-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Customize Recipes</h3>
+                    <p class="text-gray-600">Adjust portions and ingredients to match your dietary needs</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shopping-basket text-orange-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Shop Ingredients</h3>
+                    <p class="text-gray-600">Get fresh ingredients delivered right to your door</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-video text-orange-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Video Tutorials</h3>
+                    <p class="text-gray-600">Learn with step-by-step video instructions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Recipes Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800">Popular Recipes</h2>
+                <a href="#" class="text-orange-500 hover:text-orange-600">View All →</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="Recipe 1" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Vegetarian</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Mediterranean Salad</h3>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">25 mins</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="text-gray-600">4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Similar recipe cards x2 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-orange-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Ready to Start Cooking?</h2>
+                <p class="text-white text-lg mb-8">Join our community and discover amazing recipes today!</p>
+                <button class="bg-white text-orange-500 px-8 py-3 rounded-lg hover:bg-gray-100 transition">
+                    Sign Up Now - It's Free!
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About CookNShare</h3>
+                    <p class="text-gray-400">Your go-to platform for discovering and sharing delicious recipes from around the world.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Recipes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shop</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Community</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <div class="flex">
+                        <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-l-lg w-full"/>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-r-lg hover:bg-orange-600">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2024 CookNShare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
