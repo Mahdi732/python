@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookNShare - Découvrez Nos Recettes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-[#FFF7ED]">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center gap-2">
+                        <i class="fas fa-utensils text-orange-500 text-2xl"></i>
+                        <span class="font-bold text-xl">CookNShare</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="#" class="text-gray-700 hover:text-orange-500">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500">Recipes</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500">Shop</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500">Community</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-sm text-gray-600">eye64975@gmail.com</span>
+                    <img src="/api/placeholder/32/32" alt="Profile" class="w-8 h-8 rounded-full">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-orange-500 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="Korean-Side-Dishes.png" alt="Food background" class="w-full h-full object-cover opacity-30">
+        </div>
+        <div class="relative container mx-auto px-4 py-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Découvrez Nos Recettes</h1>
+            <p class="text-xl text-white/90 mb-8">Plus de 1000 recettes savoureuses à explorer et à partager</p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-2xl">
+                <div class="relative">
+                    <input type="text" 
+                           placeholder="Que souhaitez-vous cuisiner aujourd'hui ?" 
+                           class="w-full pl-12 pr-4 py-4 rounded-xl shadow-lg focus:ring-2 focus:ring-orange-300 focus:outline-none">
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Categories -->
+        <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+            <h2 class="text-lg font-semibold mb-4">Explorez par catégorie</h2>
+            <div class="flex flex-wrap gap-3">
+                <button class="px-4 py-2 bg-orange-500 text-white rounded-lg flex items-center gap-2">
+                    <i class="fas fa-utensils"></i>
+                    Toutes les recettes
+                </button>
+                <button class="px-4 py-2 bg-white border hover:bg-gray-50 rounded-lg flex items-center gap-2">
+                    <i class="fas fa-leaf text-green-500"></i>
+                    Végétarien
+                </button>
+                <button class="px-4 py-2 bg-white border hover:bg-gray-50 rounded-lg flex items-center gap-2">
+                    <i class="fas fa-wheat-awn-circle-exclamation text-yellow-600"></i>
+                    Sans Gluten
+                </button>
+                <button class="px-4 py-2 bg-white border hover:bg-gray-50 rounded-lg flex items-center gap-2">
+                    <i class="fas fa-drumstick-bite text-red-500"></i>
+                    Keto
+                </button>
+                <button class="px-4 py-2 bg-white border hover:bg-gray-50 rounded-lg flex items-center gap-2">
+                    <i class="fas fa-clock text-purple-500"></i>
+                    Express
+                </button>
+            </div>
+        </div>
+
+        <!-- Active Filters -->
+        <div class="flex flex-wrap gap-2 mb-6">
+            <span class="inline-flex items-center gap-2 px-3 py-1 bg-orange-100 text-orange-700 rounded-lg text-sm">
+                Temps de préparation: < 30 min
+                <button class="hover:text-orange-900"><i class="fas fa-times"></i></button>
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1 bg-orange-100 text-orange-700 rounded-lg text-sm">
+                Note: 4+ étoiles
+                <button class="hover:text-orange-900"><i class="fas fa-times"></i></button>
+            </span>
+        </div>
+
+        <!-- Recipe Grid and Sidebar Layout -->
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Recipe Grid -->
+            <div class="flex-1">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Recipe Card -->
+                    <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/300" alt="Healthy Chicken Mozzarella Pizza" class="w-full h-48 object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60">
+                                <div class="flex gap-2">
+                                    <span class="px-2 py-1 bg-orange-500 text-white rounded-full text-xs">Appetizer</span>
+                                    <span class="px-2 py-1 bg-green-500 text-white rounded-full text-xs">Breakfast</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold mb-2">Healthy Chicken Mozzarella Pizza</h3>
+                            <p class="text-gray-600 text-sm mb-4">A recipe is a set of instructions for preparing a particular dish, including a list of the ingredients required...</p>
+                            <div class="flex justify-between items-center text-sm">
+                                <div class="flex gap-4">
+                                    <span class="flex items-center gap-1">
+                                        <i class="far fa-clock text-orange-500"></i>
+                                        1h 25 mins
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-user text-orange-500"></i>
+                                        Beginner
+                                    </span>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button class="text-orange-500"><i class="far fa-heart"></i></button>
+                                    <button class="text-orange-500"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- More recipe cards would go here -->
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:w-80">
+                <!-- Popular Recipes -->
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-6">
+                    <h2 class="text-lg font-semibold mb-4">Popular Recipes</h2>
+                    <div class="space-y-4">
+                        <div class="flex gap-3">
+                            <img src="/api/placeholder/80/80" alt="Recipe" class="w-20 h-20 rounded-lg object-cover">
+                            <div>
+                                <h3 class="font-medium">Healthy Chicken Mozzarella Pizza</h3>
+                                <div class="text-sm text-gray-500">
+                                    <p>1h 25 mins • Beginner</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More popular recipes would go here -->
+                    </div>
+                </div>
+
+                <!-- Recipe Categories -->
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-6">
+                    <h2 class="text-lg font-semibold mb-4">Recipe Categories</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="#" class="flex flex-col items-center p-3 bg-orange-50 rounded-lg hover:bg-orange-100">
+                            <i class="fas fa-hamburger text-2xl text-orange-500 mb-2"></i>
+                            <span class="text-sm">Appetizer</span>
+                        </a>
+                        <a href="#" class="flex flex-col items-center p-3 bg-orange-50 rounded-lg hover:bg-orange-100">
+                            <i class="fas fa-egg text-2xl text-orange-500 mb-2"></i>
+                            <span class="text-sm">Breakfast</span>
+                        </a>
+                        <!-- More categories would go here -->
+                    </div>
+                </div>
+
+                <!-- Recipe Keys -->
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h2 class="text-lg font-semibold mb-4">Recipe Keys</h2>
+                    <div class="grid grid-cols-2 gap-3 text-sm">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-seedling text-green-500"></i>
+                            <span>Corn Free</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-cow text-red-500"></i>
+                            <span>Dairy Free</span>
+                        </div>
+                        <!-- More recipe keys would go here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About CookNShare</h3>
+                    <p class="text-gray-400">Your go-to platform for discovering and sharing delicious recipes from around the world.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Recipes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shop</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Community</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded bg-gray-800 text-white">
+                        <button class="px-4 py-2 bg-orange-500 rounded hover:bg-orange-600">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2024 CookNShare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
