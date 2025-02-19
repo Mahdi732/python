@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookNShare - Next Gen Food Social Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Add custom animations -->
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float { animation: float 3s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
+    <!-- Glass-morphic Navigation -->
+    <nav class="backdrop-blur-md bg-white/70 fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Animated Logo -->
+                <div class="text-3xl font-extrabold bg-gradient-to-r from-rose-500 to-orange-500 text-transparent bg-clip-text hover:scale-105 transition-transform">
+                    CookNShare
+                </div>
+                
+                <!-- Dynamic Search Bar -->
+                <div class="hidden md:flex items-center flex-1 max-w-2xl mx-8">
+                    <div class="w-full group">
+                        <div class="relative">
+                            <input type="text" placeholder="Search recipes, chefs, or ingredients..." 
+                                   class="w-full px-4 py-2 rounded-full bg-gray-100 focus:bg-white border-2 border-transparent focus:border-rose-300 transition-all duration-300 outline-none group-hover:bg-white">
+                            <i class="fas fa-search absolute right-4 top-3 text-gray-400 group-hover:text-rose-500 transition-colors"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="nav-item p-2 rounded-lg hover:bg-rose-50 transition-all group">
+                        <i class="fas fa-home text-xl group-hover:text-rose-500 transition-colors"></i>
+                    </a>
+                    <a href="#" class="nav-item p-2 rounded-lg hover:bg-rose-50 transition-all group">
+                        <i class="fas fa-compass text-xl group-hover:text-rose-500 transition-colors"></i>
+                    </a>
+                    <a href="#" class="nav-item p-2 rounded-lg hover:bg-rose-50 transition-all group">
+                        <i class="fas fa-bell text-xl group-hover:text-rose-500 transition-colors"></i>
+                    </a>
+                    <!-- Profile Button with Status -->
+                    <div class="relative group">
+                        <button class="w-10 h-10 rounded-full bg-gradient-to-r from-rose-400 to-orange-400 p-0.5 hover:scale-105 transition-transform">
+                            <div class="w-full h-full rounded-full border-2 border-white bg-gray-200"></div>
+                        </button>
+                        <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-400 rounded-full border-2 border-white"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20 pb-16 px-4 max-w-7xl mx-auto">
+        <!-- Stories Section with 3D Effect -->
+        <div class="relative">
+            <div class="flex overflow-x-auto space-x-4 p-4 hide-scrollbar">
+                <!-- Add Story Button -->
+                <div class="flex-shrink-0 w-24 group">
+                    <div class="w-20 h-20 rounded-full bg-gradient-to-r from-rose-500 to-orange-500 p-0.5 group-hover:scale-105 transition-transform">
+                        <div class="w-full h-full rounded-full border-2 border-white bg-white flex items-center justify-center">
+                            <i class="fas fa-plus text-2xl text-rose-500"></i>
+                        </div>
+                    </div>
+                    <p class="text-sm text-center mt-2 font-medium">Add Story</p>
+                </div>
+                <!-- Featured Stories -->
+                <div class="flex space-x-4">
+                    <!-- Repeat for other stories with gradient borders -->
+                    <StoryItem title="Italian Night" />
+                    <StoryItem title="Desserts" />
+                    <StoryItem title="Quick Meals" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic Feed -->
+        <div class="w-[50rem] gap-6 mt-8 ">
+            <!-- Enhanced Recipe Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <!-- Card Header -->
+                <div class="p-4 flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-200"></div>
+                        <div>
+                            <p class="font-semibold">Chef Maria</p>
+                            <p class="text-xs text-gray-500">Professional Chef</p>
+                        </div>
+                    </div>
+                    <button class="text-gray-500"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+
+                <!-- Recipe Image -->
+                <div class="aspect-w-4 aspect-h-3">
+                    <div class="w-full h-96 bg-gray-200"></div>
+                </div>
+
+                <!-- Interaction Buttons -->
+                <div class="p-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex space-x-4">
+                            <button class="text-2xl text-gray-600 hover:text-rose-500">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="text-2xl text-gray-600 hover:text-rose-500">
+                                <i class="far fa-comment"></i>
+                            </button>
+                            <button class="text-2xl text-gray-600 hover:text-rose-500">
+                                <i class="far fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <button class="text-2xl text-gray-600 hover:text-rose-500">
+                            <i class="far fa-bookmark"></i>
+                        </button>
+                    </div>
+
+                    <!-- Recipe Details -->
+                    <div class="space-y-2">
+                        <p class="font-semibold">Mediterranean Pasta 🍝</p>
+                        <p class="text-sm text-gray-600">A delicious fusion of fresh ingredients and Mediterranean flavors. Perfect for summer dinners!</p>
+                        <div class="flex space-x-4 text-xs text-gray-500">
+                            <span><i class="far fa-clock"></i> 30 mins</span>
+                            <span><i class="fas fa-user-friends"></i> Serves 4</span>
+                            <span><i class="fas fa-fire"></i> 450 cal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Enhanced Mobile Navigation -->
+    <nav class="md:hidden fixed bottom-0 w-full backdrop-blur-md bg-white/70 border-t border-gray-200">
+        <div class="flex justify-around py-3">
+            <a href="#" class="group flex flex-col items-center">
+                <i class="fas fa-home text-2xl group-hover:text-rose-500 transition-colors"></i>
+                <span class="text-xs mt-1 group-hover:text-rose-500 transition-colors">Home</span>
+            </a>
+            <a href="#" class="group flex flex-col items-center">
+                <i class="fas fa-search text-2xl group-hover:text-rose-500 transition-colors"></i>
+                <span class="text-xs mt-1 group-hover:text-rose-500 transition-colors">Explore</span>
+            </a>
+            <!-- Floating Action Button -->
+            <a href="#" class="relative -top-6">
+                <div class="w-14 h-14 rounded-full bg-gradient-to-r from-rose-500 to-orange-500 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <i class="fas fa-plus text-white text-2xl"></i>
+                </div>
+            </a>
+            <a href="#" class="group flex flex-col items-center">
+                <i class="fas fa-bell text-2xl group-hover:text-rose-500 transition-colors"></i>
+                <span class="text-xs mt-1 group-hover:text-rose-500 transition-colors">Notifications</span>
+            </a>
+            <a href="#" class="group flex flex-col items-center">
+                <i class="fas fa-user-circle text-2xl group-hover:text-rose-500 transition-colors"></i>
+                <span class="text-xs mt-1 group-hover:text-rose-500 transition-colors">Profile</span>
+            </a>
+        </div>
+    </nav>
+</body>
+</html>
